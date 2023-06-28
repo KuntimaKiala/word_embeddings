@@ -1,3 +1,4 @@
+import numpy as np
 from utilities.protocols import  read_data, stop_words_removal, bigrams, dictionary, one_hot_vector, data_process
 
 if __name__ == "__main__" :
@@ -14,4 +15,9 @@ if __name__ == "__main__" :
     # 5 - create a one hot vector
     one_hot_v = one_hot_vector(dictionary_words, printf=False)
    
+    # 6 - Extract Input and Output
     X, Y = data_process(bigrams, one_hot_v)
+    
+    epoch = 3
+    embed_size = 2
+    
